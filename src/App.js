@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./reset.css";
+import Navbar from "./components/Navbar";
+import Hamburguer from "./components/Hamburguer-menu";
+// import NavbarMenu from "./components/navbar-options";
+// import { Menu } from "./components/styles/destination-options/destination-options.styled";
+// import { Button } from "./components/styles/button-explorer/button-explorer.styled";
+import CardDestination from "./components/destination-card"
+import GlobalStyle from "./components/styles/Global";
+import Home from "./components/home";
+import '../src/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <div className="App">
+        <body>
+          <header>
+            <Navbar></Navbar><Hamburguer></Hamburguer>
+          </header>
+          <main>
+            {/* <Home></Home> */}
+            <CardDestination></CardDestination>
+          </main>
+        </body>
+      </div>
+    </>
   );
 }
 
