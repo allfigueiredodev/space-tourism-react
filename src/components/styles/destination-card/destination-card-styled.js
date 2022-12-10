@@ -14,6 +14,7 @@ export const DestinationCard = styled.article`
       gap: 161px;
     }
     & img {
+      /* ${myClamp('width', 375, 1440, 170, 445)} */
       ${myClamp('width', 375, 1024, 170, 445)}
       align-self: center;
       margin-bottom: 26px;

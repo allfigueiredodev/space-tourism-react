@@ -9,7 +9,7 @@ export const DotStyle = styled.div`
   &:active{
     background-color: ${white};
   } 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1440px) {
     width: 15px;
     height: 15px;
   }

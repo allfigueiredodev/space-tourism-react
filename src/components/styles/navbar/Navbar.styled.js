@@ -25,7 +25,7 @@ export const Header = styled.div`
 
   & .line-1 {
     height: 1px;
-    background: #97979745;
+    background: #979797;
     align-self: center;
     max-width: 473px;
     position: relative;
