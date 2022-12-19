@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { h2, bodyText, myClamp } from "../Global";
-import { Menu } from "../navbar-options/navbar-options.styled";
 
-export const DestinationCard = styled.article`
+export const DestinationCard = styled.article.attrs({className: 'destination'})`
   display: flex;
   flex-direction: column;
   & .destination__container {

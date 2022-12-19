@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { h3, h4, bodyText, gray } from "../Global";
 
-export const TechnologyCard = styled.article`
+export const TechnologyCard = styled.article.attrs({className: 'technology'})`
   display: flex;
   flex-direction: column;
   & .technology__wrapper {

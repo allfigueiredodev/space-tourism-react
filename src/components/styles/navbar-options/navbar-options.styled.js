@@ -5,13 +5,15 @@ export const Menu = styled.a `
     ${navText(white)};
     padding-top: 39px;
     padding-bottom: 40px;
-    text-align: center;    
+    text-align: center;
+    font-size: 1rem;       
     
     & strong {
-        color: #ffffff4f;
+        /* color: #ffffff4f; */
+        color: ${white};
         font-weight: 700;
         padding-right: 11px;
-        display: none;
+        
         @media screen and (min-width: 1440px){
             display: inline;
         }

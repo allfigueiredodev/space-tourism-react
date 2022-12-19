@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import images from "../../backgroundImages";
 
 export const myClamp = (atrb, minVpw, maxVpw, minFs, maxFs) => {
   const pixelsPerRem = 16;
@@ -40,7 +41,7 @@ export const h2 = () => {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Bellefair', serif;
-    ${myClamp('font-size', 375, 768, 56, 100)}
+    ${myClamp("font-size", 375, 768, 56, 100)}
     font-weight: 400;
     color: ${white};
 
@@ -127,8 +128,8 @@ export const pageTittle = () => {
   return `
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
-    ${myClamp('font-size', 375, 768, 16, 28)};
-    ${myClamp('letter-spacing', 375, 768, 2.7, 4.72)};
+    ${myClamp("font-size", 375, 768, 16, 28)};
+    ${myClamp("letter-spacing", 375, 768, 2.7, 4.72)};
     font-weight: 400;
     color: ${white};
     cursor: pointer;
@@ -148,26 +149,72 @@ export const bodyText = () => {
 };
 
 const GlobalStyle = createGlobalStyle`
-    /* @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap'); */
-        header {
-          @media screen and (max-width: 768px){
-            height: 88px;
-          }
-          @media screen and (min-width: 1440px){
-            height: 136px;
-          }
-        }
 
-        body {
-            height: 100vh;
-            width: 100vw;
-            background-color: #0B0D17;
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-size: cover;
+  .App:has(.home) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(${images.homeMobile});
+      @media screen and (max-width: 768px){
+      background-image: url(${images.homeTablet});
+      }
+      @media screen and (min-width: 1440px){
+        background-image: url(${images.homeDesktop});
+      }
+  }
 
-        }
+  .App:has(.destination) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(${images.destinationMobile});
+      @media screen and (max-width: 768px){
+      background-image: url(${images.destinationTablet});
+      }
+      @media screen and (min-width: 1440px){
+        background-image: url(${images.destinationDesktop});
+      }
+  }
 
+  .App:has(.crew) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(${images.crewMobile});
+      @media screen and (max-width: 768px){
+      background-image: url(${images.crewTablet});
+      }
+      @media screen and (min-width: 1440px){
+        background-image: url(${images.crewDesktop});
+      }
+  }
+
+  .App:has(.technology) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(${images.technologyMobile});
+      @media screen and (max-width: 768px){
+      background-image: url(${images.technologyTablet});
+      }
+      @media screen and (min-width: 1440px){
+        background-image: url(${images.technologyDesktop});
+      }
+  }
+
+  body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #0B0D17;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+    
+  header {
+    @media screen and (max-width: 768px){
+      height: 88px;
+    }
+    @media screen and (min-width: 1440px){
+      height: 136px;
+    }
+  }
 `;
 
 export default GlobalStyle;

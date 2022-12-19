@@ -4,21 +4,16 @@ import bgMobile from "../../../assets/home/background-home-mobile.jpg";
 import bgTablet from "../../../assets/home/background-home-tablet.jpg";
 import bgDesktop from "../../../assets/home/background-home-desktop.jpg";
 
-export const HomeCard = styled.div`
+export const HomeCard = styled.div.attrs({className: 'home'})`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(${bgMobile});
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-top: 1.5rem;
   margin-bottom: 81px;
   @media screen and (min-width: 768px) {
-    background-image: url(${bgTablet});
     margin-top: 106px;
   }
   @media screen and (min-width: 1440px) {
-    background-image: url(${bgDesktop});
     position: absolute;
     left: 165px;
     top: 387px;

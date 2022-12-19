@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
-/* body {
+.App {
   height: 100vh;
   width: 100vw;
-  background-color: #0B0D17;
-  background-image: url(./assets/home/background-home-mobile.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-weight: 400;
-} */
+}

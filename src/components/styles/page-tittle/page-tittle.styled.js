@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import {pageTittle } from "../Global";
 
-const Tittle = styled.a `
+const Tittle = styled.div `
 ${pageTittle()};
 padding-top: 39px;
 padding-bottom: 40px;

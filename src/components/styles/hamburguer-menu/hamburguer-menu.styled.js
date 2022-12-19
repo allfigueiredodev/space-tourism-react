@@ -1,21 +1,11 @@
 import styled from "styled-components";
-import { white } from "../Global";
 
-export const Lines = styled.div`
-    position: relative;
-    bottom: 3.4rem;
-    left: 87%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 24px;
-    height: 21px;
-    & div {
-      background-color: ${white};
-      width: 24px;
-      height: 3px;
-      @media screen and (min-width: 768px){
-        display: none;
-      }
-    }
-  `;
+export const BurgerContainer = styled.div.attrs({className: "hamburger__wrapper"})`
+  position: relative; 
+  bottom: 4.2rem;
+  left: 81%;
+  display: inline-block;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;

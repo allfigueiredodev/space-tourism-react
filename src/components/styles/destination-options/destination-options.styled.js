@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {navText, white, gray} from "../Global";
 
-export const Menu = styled.span `
+export const Menu = styled.a `
     ${navText()};
     color: ${gray};
     padding-bottom: 8px;  

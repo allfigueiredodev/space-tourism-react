@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { h3, h4, bodyText } from "../Global";
 
-export const CrewCard = styled.article`
+export const CrewCard = styled.article.attrs({className: 'crew'})`
   display: flex;
   flex-direction: column;
   & .card__wrapper {
