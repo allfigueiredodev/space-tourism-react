@@ -9,7 +9,6 @@ export const Menu = styled.a `
     font-size: 1rem;       
     
     & strong {
-        /* color: #ffffff4f; */
         color: ${white};
         font-weight: 700;
         padding-right: 11px;

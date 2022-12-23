@@ -5,7 +5,7 @@ export const Header = styled.nav`
   justify-content: space-between;
   padding: 1.5rem 0 1.5rem 1.5rem;
   display: flex;
-  margin: 0 auto;  
+  margin: 0 auto;
   @media screen and (min-width: 768px) {
     padding: 0 0 0 2.4375rem;
   }
@@ -37,29 +37,29 @@ export const Header = styled.nav`
   }
 
   & .nav__menu {
-      width: 67.8%;
-      height: 100vh;
-      background-color: #97979714;
-      backdrop-filter: blur(30px);
-      display: none;
-      justify-content: flex-start;
-      padding-top: 6rem;
-      flex-direction: column;
-      position: absolute;
-      right: 0;
-      top: 0;
-      @media screen and (min-width: 767px) {
-        width: 61.8%;
-        height: 100%;
-        max-height: 96px;
-        padding-top: 0;
-        display: flex;
-      }
-      & ul {
+    width: ${(props) => props.state ? '67.8%' : '0%'};
+    height: 100vh;
+    background-color: #97979714;
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all ease-in-out .5s; 
+    @media screen and (min-width: 767px) {
+      width: 61.8%;
+      height: 100%;
+      max-height: 96px;
+      padding-top: 0;
+      display: flex;
+    }
+    & ul {
       justify-content: space-evenly;
       display: flex;
       flex-direction: column;
-      padding-left: 2rem;
       height: 25.8%;
       @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -71,6 +71,11 @@ export const Header = styled.nav`
       }
       & li {
         list-style: none;
+        & a {
+          padding-left: 2rem;
+          transition: all ease-in-out .5s; 
+        }
+
         & span {
           text-transform: uppercase;
           color: ${white};

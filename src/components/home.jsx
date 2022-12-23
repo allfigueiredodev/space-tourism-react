@@ -15,7 +15,9 @@ export default function Home() {
           experience!
         </p>
       </HomeCard>
-      <Button>explore</Button>
+      <Button>
+        explore
+      </Button> 
     </>
   );
 }
