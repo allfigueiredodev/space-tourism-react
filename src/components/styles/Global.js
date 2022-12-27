@@ -154,7 +154,7 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url(${images.homeMobile});
-      @media screen and (max-width: 768px){
+      @media screen and (min-width: 768px){
       background-image: url(${images.homeTablet});
       }
       @media screen and (min-width: 1440px){
@@ -166,7 +166,7 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url(${images.destinationMobile});
-      @media screen and (max-width: 768px){
+      @media screen and (min-width: 768px){
       background-image: url(${images.destinationTablet});
       }
       @media screen and (min-width: 1440px){
@@ -178,7 +178,7 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url(${images.crewMobile});
-      @media screen and (max-width: 768px){
+      @media screen and (min-width: 768px){
       background-image: url(${images.crewTablet});
       }
       @media screen and (min-width: 1440px){
@@ -190,7 +190,7 @@ const GlobalStyle = createGlobalStyle`
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url(${images.technologyMobile});
-      @media screen and (max-width: 768px){
+      @media screen and (min-width: 768px){
       background-image: url(${images.technologyTablet});
       }
       @media screen and (min-width: 1440px){

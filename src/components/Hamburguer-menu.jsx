@@ -31,6 +31,7 @@ export default function Hamburger() {
         onToggle={(toggled) => {
           if (toggled) {
             anchor.forEach(element => {element.removeAttribute('style')});
+            anchor.forEach(element => {element.setAttribute('style', 'display: inline')});
             setIsOpen(true);
           } else {
             setIsOpen(false);

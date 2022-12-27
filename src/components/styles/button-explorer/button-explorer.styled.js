@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { white, universeBlack, myClamp } from "../Global";
-import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
-export const Button = styled(motion.a)`
+export const Button = styled.a`
   margin: 0 auto;
   background-color: ${white};
   border-radius: 50%;

@@ -42,8 +42,7 @@ export const Header = styled.nav`
     background-color: #97979714;
     backdrop-filter: blur(30px);
     display: flex;
-    justify-content: flex-start;
-    padding-top: 6rem;
+    justify-content: flex-start;    
     flex-direction: column;
     position: absolute;
     right: 0;
@@ -57,6 +56,7 @@ export const Header = styled.nav`
       display: flex;
     }
     & ul {
+      padding-top: 6rem;
       justify-content: space-evenly;
       display: flex;
       flex-direction: column;
@@ -74,7 +74,8 @@ export const Header = styled.nav`
         & a {
           padding-left: 2rem;
           transition: all ease-in-out .5s; 
-        }
+          display: none;
+      }
 
         & span {
           text-transform: uppercase;
