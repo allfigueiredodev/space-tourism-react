@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import { subheading1, subheading2 } from "../Global";
+import { subheading1, subheading2 } from "./styles/Global";
 
 export const Bottom = styled.div `
         text-align: center;
@@ -17,3 +18,12 @@ export const Bottom = styled.div `
         ${subheading1()};        
     }
 `
+
+export default function CardBottom({ subheading1, subheading2 }) {
+  return (
+    <Bottom>
+      <span>{subheading2}</span>
+      <span>{subheading1}</span>
+    </Bottom>
+  );
+}

@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import { white } from "../Global";
+import { white } from "./styles/Global";
 
 export const DotStyle = styled.div`
   width: 10px;
@@ -14,3 +15,12 @@ export const DotStyle = styled.div`
     height: 15px;
   }
 `;
+
+export default function Dot({id, onClick}) {
+  return (
+      <DotStyle id={id} onClick={onClick}>
+          
+      </DotStyle>
+      
+  )
+} 

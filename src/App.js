@@ -2,11 +2,11 @@ import React, {useContext} from "react";
 import "./reset.css";
 import GlobalStyle from "./components/styles/Global";
 import '../src/App.css';
-import Navbar from "./components/Navbar";
-import Home from "./components/home";
-import CardCrew from "./components/crew-card";
-import CardDestination from "./components/destination-card"
-import CardTechnology from "./components/technology-card";
+import Navbar from "./components/navbar.styled";
+import Home from "./components/home-card.styled";
+import CardCrew from "./components/crew-card.styled";
+import CardDestination from "./components/destination-card.styled"
+import CardTechnology from "./components/technology-card.styled";
 import { PrimaryContext } from "./context";
 
 function App() {

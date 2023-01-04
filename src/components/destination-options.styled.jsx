@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import {navText, white, gray} from "../Global";
+import {navText, white, gray} from "./styles/Global";
 
 export const Menu = styled.a `
     ${navText()};
@@ -16,3 +17,11 @@ export const Menu = styled.a `
         }        
     }
 `
+
+export default function DestinationMenu({ planet, id, onClick }) {
+    return (
+      <Menu id={id} onClick={onClick}>
+        {planet}
+      </Menu>
+    );
+  }
