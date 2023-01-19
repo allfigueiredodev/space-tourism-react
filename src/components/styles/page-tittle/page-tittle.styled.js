@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import React from "react";
+import React, {useRef} from "react";
 import {pageTittle } from "../Global";
+import { CSSTransition } from "react-transition-group";
 
 const Tittle = styled.div `
 ${pageTittle()};
@@ -25,9 +26,14 @@ text-align: center;
 `
 
 export default function PageTittle ({tittle, pageIndex}) {
+
+    const nodeRef = useRef(null);
+
     return (
-        <Tittle>
-            <a><strong>{pageIndex}</strong>{tittle}</a>
-        </Tittle>
+        <CSSTransition nodeRef={nodeRef} appear={true} timeout={1000} classNames="my-node">
+            <Tittle>
+                <a><strong>{pageIndex}</strong>{tittle}</a>
+            </Tittle>
+        </CSSTransition>
     )
 }

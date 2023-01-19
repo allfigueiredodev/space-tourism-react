@@ -1,4 +1,4 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import styled from "styled-components";
 import {navText, white, gray} from "./styles/Global";
 
@@ -6,9 +6,10 @@ export const Menu = styled.a `
     ${navText()};
     color: ${gray};
     padding-bottom: 8px;  
+    text-decoration: none;
     @media screen and (min-width: 768px){
         padding-bottom: 12px;
-        &:active {
+        &[data-active="true"]{
             border-bottom: 2px solid ${white};
         }
         &:hover {
@@ -18,10 +19,10 @@ export const Menu = styled.a `
     }
 `
 
-export default function DestinationMenu({ planet, id, onClick }) {
+function DestinationMenu (props, ref) {
     return (
-      <Menu id={id} onClick={onClick}>
-        {planet}
-      </Menu>
+      <Menu data-active={props['data-active']} ref={ref} className={props.className} id={props.id} onClick={props.onClick}>{props.planet}</Menu>
     );
-  }
+}
+
+export default forwardRef(DestinationMenu);  

@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { white, universeBlack, myClamp } from "../Global";
+import { Link } from "react-router-dom";
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   margin: 0 auto;
   background-color: ${white};
+  text-decoration: none;
   border-radius: 50%;
   color: ${universeBlack};
   width: clamp(9.375rem, 6.6461rem + 11.6432vw, 17.125rem);

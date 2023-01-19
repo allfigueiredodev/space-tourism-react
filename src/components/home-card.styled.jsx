@@ -66,7 +66,7 @@ export default function Home() {
           experience!
         </p>
       </HomeCard>
-      <Button id="1" onClick={primaryHandler}>
+      <Button to="destination" id="1" onClick={primaryHandler}>
         explore
       </Button> 
     </>

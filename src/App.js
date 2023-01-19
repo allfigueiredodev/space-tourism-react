@@ -1,17 +1,13 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./reset.css";
 import GlobalStyle from "./components/styles/Global";
 import '../src/App.css';
 import Navbar from "./components/navbar.styled";
-import Home from "./components/home-card.styled";
-import CardCrew from "./components/crew-card.styled";
-import CardDestination from "./components/destination-card.styled"
-import CardTechnology from "./components/technology-card.styled";
-import { PrimaryContext } from "./context";
+import { Outlet, useLocation } from "react-router-dom";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 function App() {
-const { primaryIndex } = useContext(PrimaryContext);
-const pages = [<Home/>, <CardDestination/>, <CardCrew/>, <CardTechnology />]
+  const location = useLocation()
   return (
     <>
       <GlobalStyle/>
@@ -19,11 +15,19 @@ const pages = [<Home/>, <CardDestination/>, <CardCrew/>, <CardTechnology />]
           <header>
             <Navbar></Navbar>
           </header>
-          <main>
-            {
-              pages[primaryIndex]
-            }
-          </main>
+          <SwitchTransition>
+            <CSSTransition             
+            key={location.pathname}
+            timeout={2600}
+            classNames="page"
+            // mountOnEnter
+            // unmountOnExit 
+            >
+              <main>
+                <Outlet />
+              </main>
+            </CSSTransition> 
+          </SwitchTransition>
         </div>
     </>
   );

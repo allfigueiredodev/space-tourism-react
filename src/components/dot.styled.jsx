@@ -7,7 +7,10 @@ export const DotStyle = styled.div`
   height: 10px;
   border-radius: 50%;
   background-color: #ffffff3a;
-  &:active{
+  &:hover {
+    transform: scale(1.2)
+  }
+  &[data-active="true"]{
     background-color: ${white};
   } 
   @media screen and (min-width: 1440px) {
@@ -16,9 +19,9 @@ export const DotStyle = styled.div`
   }
 `;
 
-export default function Dot({id, onClick}) {
+export default function Dot(props) {
   return (
-      <DotStyle id={id} onClick={onClick}>
+      <DotStyle data-active={props['data-active']} id={props.id} onClick={props.onClick}>
           
       </DotStyle>
       

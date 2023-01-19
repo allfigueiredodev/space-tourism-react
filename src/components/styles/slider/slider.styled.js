@@ -13,7 +13,7 @@ export const Slider = styled.a `
     &:hover {
         border-color: ${white};
     }
-    &:active {
+    &[data-active="true"] {
         background-color: ${white};
         color: ${universeBlack};
     }
@@ -26,5 +26,6 @@ export const Slider = styled.a `
     width: 80px;
     height: 80px;
     line-height: 80px;
-    }
+
+  }
 `
